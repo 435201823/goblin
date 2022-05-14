@@ -14,8 +14,12 @@
       <!-- <span slot="title">Goblin</span> -->
     </el-menu-item>
     <el-menu-item index="2">
+      <i class="el-icon-s-platform"></i>
+      <span slot="title">资源管理器</span>
+    </el-menu-item>
+    <el-menu-item index="3">
       <i class="el-icon-setting"></i>
-      <span slot="title">导航四</span>
+      <span slot="title">设置</span>
     </el-menu-item>
   </el-menu>
 </template>
