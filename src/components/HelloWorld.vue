@@ -6,7 +6,11 @@
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <el-menu-item index="1" backgroundColor="#545c64">
+    <el-menu-item index="1">
+      <el-image :src="require('@/assets/logo.png')"></el-image>
+      <span slot="title">Goblin</span>
+    </el-menu-item>
+    <el-menu-item index="2">
       <i class="el-icon-setting"></i>
       <span slot="title">导航四</span>
     </el-menu-item>
@@ -35,6 +39,5 @@ export default {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
-  background-color: aquamarine;
 }
 </style>
