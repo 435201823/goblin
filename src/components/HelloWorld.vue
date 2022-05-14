@@ -7,8 +7,11 @@
     :collapse="isCollapse"
   >
     <el-menu-item index="1">
-      <el-image :src="require('@/assets/logo.png')"></el-image>
-      <span slot="title">Goblin</span>
+      <el-image
+        :src="require('@/assets/logo.png')"
+        style="height: 20px"
+      ></el-image>
+      <!-- <span slot="title">Goblin</span> -->
     </el-menu-item>
     <el-menu-item index="2">
       <i class="el-icon-setting"></i>
