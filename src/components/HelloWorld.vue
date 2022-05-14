@@ -1,7 +1,7 @@
 <template>
   <el-menu
     default-active="0"
-    class="el-menu-vertical-demo"
+    class="el-menu-vertical-demo maxHeight"
     @open="handleOpen"
     @close="handleClose"
     :collapse="isCollapse"
@@ -42,5 +42,9 @@ export default {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
+}
+.maxHeight {
+  min-height: 100vh;
+  overflow: hidden;
 }
 </style>
