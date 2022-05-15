@@ -13,7 +13,7 @@
       :name="item.name"
       closable
     >
-      {{ item.content }}
+      <component :is="item.content"></component>
     </el-tab-pane>
     <el-tab-pane key="add" name="add">
       <span
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import HostManage from "./HostManage.vue";
 export default {
   data() {
     return {
@@ -36,7 +37,7 @@ export default {
         {
           title: "活动1",
           name: "1",
-          content: "asdf",
+          content: HostManage,
         },
       ],
       tabIndex: 1,
@@ -89,5 +90,6 @@ export default {
       }
     },
   },
+  components: { HostManage },
 };
 </script>
