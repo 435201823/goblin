@@ -21,4 +21,8 @@ export default {
 </script>
 
 
-<style></style>
+<style>
+.el-main {
+  padding: 0px 0px;
+}
+</style>
