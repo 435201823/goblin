@@ -13,6 +13,7 @@
       :name="item.name"
       closable
     >
+      {{ item.content }}
     </el-tab-pane>
     <el-tab-pane key="add" name="add">
       <span
@@ -35,6 +36,7 @@ export default {
         {
           title: "活动1",
           name: "1",
+          content: "asdf",
         },
       ],
       tabIndex: 1,
