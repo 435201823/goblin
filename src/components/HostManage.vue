@@ -9,14 +9,14 @@
           <el-input v-model="form.name" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="地址" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
+          <el-input v-model="form.addr" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="用户名" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
+          <el-input v-model="form.username" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="密码" :label-width="formLabelWidth">
           <el-input
-            v-model="form.name"
+            v-model="form.psw"
             autocomplete="off"
             show-password
           ></el-input>
@@ -24,9 +24,7 @@
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible = false"
-          >确 定</el-button
-        >
+        <el-button type="primary" @click="customCommand()">确 定</el-button>
       </div>
     </el-dialog>
   </div>
@@ -35,6 +33,8 @@
 <style></style>
 
 <script>
+import { invoke } from "@tauri-apps/api/tauri";
+
 export default {
   data() {
     return {
@@ -52,6 +52,19 @@ export default {
       },
       formLabelWidth: "120px",
     };
+  },
+  methods: {
+    customCommand() {
+      // Invoke the command
+      invoke("save_session", { name: this.form.name });
+      // {
+      //   name: this.form.name,
+      //   addr: this.form.addr,
+      //   username: this.form.username,
+      //   psw: this.form.psw,
+      // }
+      // dialogFormVisible = false;
+    },
   },
 };
 </script>
