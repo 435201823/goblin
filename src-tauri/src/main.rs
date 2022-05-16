@@ -11,8 +11,8 @@ fn main() {
 }
 
 #[tauri::command]
-fn save_session(session_name:String,addr:String) {
-  println!("I was invoked from JS:{}",session_name);
+fn save_session(name:String,addr:String) {
+  println!("I was invoked from JS:{}",name);
   println!("I was invoked from JS:{}",addr);
 }
 
