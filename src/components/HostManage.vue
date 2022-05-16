@@ -40,16 +40,7 @@ export default {
     return {
       dialogTableVisible: false,
       dialogFormVisible: false,
-      form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
-      },
+      form: {},
       formLabelWidth: "120px",
     };
   },
