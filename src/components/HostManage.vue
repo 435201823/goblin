@@ -47,7 +47,10 @@ export default {
   methods: {
     customCommand() {
       // Invoke the command
-      invoke("save_session", { name: this.form.name });
+      invoke("save_session", {
+        session_name: this.form.name,
+        addr: this.form.addr,
+      });
       // {
       //   name: this.form.name,
       //   addr: this.form.addr,
