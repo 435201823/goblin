@@ -50,13 +50,13 @@ export default {
   },
   methods: {
     customCommand() {
-      // Invoke the command
       invoke("create_session", {
         sessionname: this.form.session_name,
         addr: this.form.addr,
         username: this.form.username,
         password: this.form.password,
       });
+      this.$data.dialogFormVisible = false;
     },
     closeDialog() {
       this.form.session_name = "";
